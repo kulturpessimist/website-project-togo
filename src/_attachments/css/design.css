@@ -1,0 +1,161 @@
+html, body{
+	font-family: 'Source Serif Pro';
+	font-size: 1.1em;
+	font-weight: 300;
+}
+p{
+	line-height: 1.7em;
+}
+h1{
+	font-size: 2.6em;
+	font-weight: 700;
+	margin: 0.1em 0;
+}
+h2{
+	font-size: 1.8em;
+	font-weight: 600;
+	margin-top: 0px;
+}
+h3{
+	font-size: 1.4em;
+	font-weight: 600;
+	margin: 0.1em 0;
+}
+h4{
+	font-size: 1.1em;
+	font-weight: 400;
+	margin-top: 0px;
+}
+h5{
+	font-size: 1.1em;
+	font-weight: 400;
+	margin: 0.4em 0;
+}
+h6{
+	font-size: 0.8em;
+	font-weight: 300;
+	margin-top: 0px;
+}
+
+.header{
+	width: 100%;
+	height: 100vh;
+	background-color: #000;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	margin-bottom: 4em;
+	display: flex;
+	align-items: flex-end;
+	align-self: flex-end;
+}
+.header div{
+	width: 800px;
+	margin: 0 auto ;
+}
+.header h1{
+	margin-top: 0px;
+}
+
+/*
+ *	Lets style the content!!
+ * */
+.content{
+	width: 700px;
+	margin: auto;
+}
+.content p img.left{
+	float: left;
+	margin-right: 0.6em;
+	margin-top: 0.3em;
+}
+.content p img.off-left{
+	float: left;
+	margin-right: 0.6em;
+	margin-top: 0.3em;
+	margin-left: -60px;
+}
+.content p img.right{
+	float: right;
+	margin-left: 0.6em;
+	margin-top: 0.3em;
+}
+.content p img.off-right{
+	float: right;
+	margin-left: 0.6em;
+	margin-top: 0.3em;
+	margin-right: -60px;
+}
+/*
+ * img:after seems not to work...
+ * */
+.content p img.left:after,
+.content p img.off-left:after{
+	clear: both;
+}
+.content p img.right:after,
+.content p img.off-right:after{
+	clear: both;
+}
+/* Descriptions for all the images in the content area */
+.description{
+	width: 190px;
+	color: #999;
+	font-style: oblique;
+	font-size: 0.9em;
+	line-height: 1.4em;
+	margin-top: 8px;
+}
+.content p img.left + .description{
+	text-align: right;
+	position: absolute;
+	margin-left: -210px;
+}
+.content p img.off-left + .description{
+	text-align: right;
+	position: absolute;
+	margin-left: -270px;
+}
+.content p img.right + .description{
+	text-align: left;
+	position: absolute;
+	margin-left: 710px;
+}
+.content p img.off-right + .description{
+	text-align: left;
+	position: absolute;
+	margin-left: 770px;
+}
+.content p img.center + .description{
+	text-align: center;
+	width: 700px;
+	margin-bottom: 1.6em;
+	margin-top: 0px;
+}
+
+/*
+ * And after all the fancy content stuff straight to the footer to end the grid stuff...
+ * */
+footer{
+	width: 100%;
+	height: 300px;
+	max-height: 300px;
+	background-color: #000;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	display: flex;
+	align-items: flex-end;
+	align-self: flex-end;
+}
+footer img, .header img{
+	display: none;
+}
+footer div{
+	width: 800px;
+	margin: 0 auto;
+	margin-bottom: 1em;
+	font-size: 0.8em;
+}
