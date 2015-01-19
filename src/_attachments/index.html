@@ -27,7 +27,7 @@
 			<h1>Headline 1</h1>
 			<h2>Headline 2</h2>
 			<p>
-				<img src="http://placehold.it/240x180" alt="Perhaps the most exciting and talked about technology today is Artificial Intelligence (AI)." class="left">Pinterest forage tofu Helvetica you probably haven't heard of them. Polaroid readymade authentic organic ugh. Gastropub Williamsburg trust fund, literally next level taxidermy tofu. Ennui shabby chic Godard listicle, Marfa Banksy bicycle rights Schlitz. Williamsburg bespoke selfies, YOLO selvage gastropub Wes Anderson Austin American Apparel bicycle rights keffiyeh retro gluten-free banh mi. IPhone brunch Vice shabby chic photo booth. Biodiesel migas mumblecore bitters wolf.
+				<img src="http://placehold.it/240x180" alt="Perhaps the most exciting and talked about technology today is Artificial Intelligence (AI)." class="left">Pinterest forage tofu <a href="#last" target="_self">Helvetyca</a> you probably haven't heard of them. Polaroid readymade authentic organic ugh. Gastropub Williamsburg trust fund, literally next level taxidermy tofu. Ennui shabby chic Godard listicle, Marfa Banksy bicycle rights Schlitz. Williamsburg bespoke selfies, YOLO selvage gastropub Wes Anderson Austin American Apparel bicycle rights keffiyeh retro gluten-free banh mi. IPhone brunch Vice shabby chic photo booth. Biodiesel migas mumblecore bitters wolf.
 			</p>
 			<p>
 				<img src="http://placehold.it/300x225" alt="Img left bigger off" class="off-left">VHS occupy hashtag, ugh lo-fi Marfa aesthetic cold-pressed Shoreditch direct trade hoodie locavore Etsy. Shoreditch Bushwick synth Pinterest, banh mi next level squid cardigan single-origin coffee four dollar toast meh tilde. Narwhal semiotics ethical Echo Park, Vice kitsch Portland Bushwick. Cred mumblecore before they sold out Helvetica Austin hella viral cornhole locavore Vice, Kickstarter Banksy. Street art Vice cray Banksy fap, 8-bit forage. Swag church-key mustache kogi +1 tattooed asymmetrical salvia, yr tofu. Street art chillwave photo booth, aesthetic gluten-free literally chia cronut bicycle rights Echo Park yr narwhal.
@@ -42,7 +42,7 @@
 				<img src="http://placehold.it/300x225" alt="Perhaps the most exciting and talked about technology today is Artificial Intelligence (AI)." class="off-right">Sustainable cliche Marfa single-origin coffee hashtag listicle. Bitters Marfa health goth, High Life Pitchfork 8-bit readymade Vice. Health goth post-ironic pork belly, occupy biodiesel paleo keffiyeh quinoa tousled flannel plaid sartorial. Health goth pork belly photo booth High Life iPhone, chia cold-pressed next level. Umami deep v fanny pack chambray ugh. Single-origin coffee gentrify Bushwick drinking vinegar, Brooklyn post-ironic church-key fingerstache Banksy ugh banh mi sustainable cardigan. Semiotics chambray pour-over distillery Neutra narwhal, seitan art party bespoke.
 			</p>
 
-			<h5>Headline 5</h5>
+			<h5 id="last">Headline 5</h5>
 			<h6>Headline 6</h6>
 			<p>
 				<img src="http://placehold.it/700x300" alt="Perhaps the most exciting and talked about technology today is Artificial Intelligence (AI). Perhaps the most exciting and talked about technology today is Artificial Intelligence (AI)." class="center">
@@ -53,27 +53,14 @@
 
 		<footer>
 			<img src="http://placehold.it/700x300">
-			<div>&copy; Impressum Kontakt Deutsch Englisch Französisch</div>
+			<div>&copy; natureOffice Impressum Kontakt Deutsch Englisch Französisch</div>
 		</footer>
 
 		<script src="js/jquery-2.1.3.min.js"></script>
+		<script src="js/jquery.smooth-scroll.min.js"></script>
+		<script src="js/main.js"></script>
 		<script>
-			(function(){
-				$('.content img').each(function(i,el){
-					var content = $(el).attr('alt');
-					$( "<div class='description'>"+content+"</div>" ).insertAfter( el );
-				});
 
-				$('footer img').each(function(i,el){
-					var src = $(el).attr('src');
-					$('footer').css('background-image', 'url('+src+')');
-				});
-
-				$('.header img').each(function(i,el){
-					var src = $(el).attr('src');
-					$('.header').css('background-image', 'url('+src+')');
-				});
-			})();
 		</script>
 		<script>
 			(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
