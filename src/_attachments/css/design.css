@@ -43,7 +43,7 @@ a, a:visited, a:active, a:hover{
 }
 
 header{
-	width: 100%;
+	width: 100vw;
 	height: 100vh;
 	background-color: #000;
 	background-position: center center;
@@ -134,30 +134,50 @@ nav{
 		-ms-transform: translateY( -100% );
 			transform: translateY( -100% );
 }
-nav ul{
+nav ul.main{
 	width: 700px;
 	margin: 0 auto;
-	height: 100%;
+	font-size: 1.0em;
+
+	margin-top: 0.9em;
+}
+nav ul.auxiliary{
+	width: 700px;
+	margin: 0 auto;
+	font-size: 0.8em;
+}
+nav ul.auxiliary li:first-child{
+	letter-spacing: -1px;
+	margin-left: 40px;
 }
 nav li{
 	float: left;
 	display: inline-block;
-	margin: 2%;
-	margin-top: 1%;
-	margin-bottom: 1%;
-	line-height: 4em;
+	margin-left: 2%;
+	margin-right: 2%;
+	line-height: 2.0em;
 }
-nav li:first-child{
-	margin-left: -190px;
-	margin-right: 40px;
+nav div{
+	height: 5em;
+	line-height: 5em;
+	width: 5em;
+	text-align: center;
+	position: absolute;
+	left: 0px;
+	top:0px;
 }
-nav li:last-child{
-}
-
-
-nav a{
+nav a, nav a:hover, nav a:active, nav a:visited{
 	text-decoration: none;
+	font-weight: 400;
+	color: #333;
 }
+nav a:hover{
+	color: #00c174;
+}
+nav ul.auxiliary a:hover{
+	/*text-decoration: underline;*/
+}
+
 /*
  *	Lets style the content!!
  * */

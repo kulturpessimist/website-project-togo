@@ -18,7 +18,7 @@ var aurora = {
 				direction: 'top',
 			  	easing: 'swing',
 				speed: "auto",
-				autoCoefficient: 3
+				autoCoefficient: 2
 			});
 		},
 		images: function(){
