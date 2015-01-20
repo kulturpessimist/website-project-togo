@@ -101,6 +101,7 @@ footer img, header img{
 	display: none;
 }
 footer a{
+	color: #ccc;
 	text-decoration:none;
 }
 /*
@@ -134,18 +135,20 @@ nav{
 			transform: translateY( -100% );
 }
 nav ul{
-	width: 1000px;
+	width: 700px;
 	margin: 0 auto;
 	height: 100%;
 }
 nav li{
 	float: left;
 	display: inline-block;
-	margin: 1%;
+	margin: 2%;
+	margin-top: 1%;
+	margin-bottom: 1%;
 	line-height: 4em;
 }
 nav li:first-child{
-	margin-left: -40px;
+	margin-left: -190px;
 	margin-right: 40px;
 }
 nav li:last-child{
@@ -197,7 +200,7 @@ nav a{
 }
 /* Descriptions for all the images in the content area */
 .description{
-	width: 190px;
+	width: 160px;
 	color: #999;
 	font-style: oblique;
 	font-size: 0.9em;
@@ -207,22 +210,22 @@ nav a{
 .content p img.left + .description{
 	text-align: right;
 	position: absolute;
-	margin-left: -210px;
+	margin-left: -190px;
 }
 .content p img.off-left + .description{
 	text-align: right;
 	position: absolute;
-	margin-left: -270px;
+	margin-left: -240px;
 }
 .content p img.right + .description{
 	text-align: left;
 	position: absolute;
-	margin-left: 710px;
+	margin-left: 724px;
 }
 .content p img.off-right + .description{
 	text-align: left;
 	position: absolute;
-	margin-left: 770px;
+	margin-left: 780px;
 }
 .content p img.center + .description{
 	text-align: center;
