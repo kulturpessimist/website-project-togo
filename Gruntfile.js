@@ -4,6 +4,21 @@ module.exports = function(grunt) {
 		pkg: grunt.file.readJSON('package.json'),
 		cfg: grunt.file.readJSON('.couchapprc'),
 
+		uglify: {
+			options:{
+				banner: '/*! <%= pkg.name %> - #<%= pkg.version %> - ' +
+						'Author: Alex Schedler <alex@schedler.co>' +
+						'<%= grunt.template.today("yyyy-mm-dd") %> */'
+			},
+			default: {
+				files:[{
+					expand: true,
+					cwd: 'src/_attachments/application',
+					src: '**/*.js',
+					dest: 'js/app.min.js'
+				}]
+			}
+		},
 		connect: {
 			server: {
 				options: {
@@ -13,10 +28,36 @@ module.exports = function(grunt) {
 				}
 			 }
 		},
+		watch: {
+			src: {
+				files: [
+					'src/_attachments/**/*', '!src/_attachments/js/**/*'
+				],
+				tasks: ['uglify'],
+				options: {
+					livereload: true
+				}
+			},
+			gruntfile: {
+				files: ['Gruntfile.js']
+			},
+			livereload: {
+				options: {
+					livereload: '<%= connect.options.livereload %>'
+				},
+				files: [
+					'src/_attachments/**/*', '!src/_attachments/js/**/*'
+				]
+			}
+		},
+		/*
+		 * CouchDB ...
+		 */
 		'couch-compile': {
 			website: {
 				files: {
-					'build/website.json': 'src'
+					src: ['src', '!src/application'],
+					dest: 'build/website.json'
 				}
 			}
 		},
@@ -35,6 +76,8 @@ module.exports = function(grunt) {
 
 	grunt.loadNpmTasks('grunt-couch');
 	grunt.loadNpmTasks('grunt-contrib-connect');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	grunt.registerTask('default', ['connect']);
 	grunt.registerTask('compile', ['couch-compile']);
