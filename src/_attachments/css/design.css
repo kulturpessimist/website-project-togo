@@ -100,8 +100,8 @@ footer li{
 footer img, header img{
 	display: none;
 }
-footer a{
-	color: #ccc;
+footer a, footer a:hover, footer a:active, footer a:visited{
+	color: #DDD;
 	text-decoration:none;
 }
 /*
