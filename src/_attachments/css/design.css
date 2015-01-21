@@ -140,6 +140,9 @@ footer a, footer a:hover, footer a:active, footer a:visited{
 	color: #DDD;
 	text-decoration:none;
 }
+footer a img{
+	vertical-align:middle;
+}
 .home footer a, .home footer a:hover, .home footer a:active, .home footer a:visited{
 	color: #BBB;
 	text-decoration:none;
