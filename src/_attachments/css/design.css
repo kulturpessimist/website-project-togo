@@ -118,6 +118,11 @@ footer ul{
 	margin-bottom: 1em;
 	font-size: 0.8em;
 	text-align: center;
+	
+	-webkit-padding-start: 0px;
+}
+.home footer ul{
+	border-top: 1px #DDD solid;
 }
 footer li{
 	float: left;
