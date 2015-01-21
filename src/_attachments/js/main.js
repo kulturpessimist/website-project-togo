@@ -1,13 +1,13 @@
 var aurora = {
 	prepare: {
 		header: function(){
-			$('header img').each(function(i,el){
+			$('header > img').each(function(i,el){
 				var src = $(el).attr('src');
 				$('header').css('background-image', 'url('+src+')');
 			});
 		},
 		footer: function(){
-			$('footer img').each(function(i,el){
+			$('footer > img').each(function(i,el){
 				var src = $(el).attr('src');
 				$('footer').css('background-image', 'url('+src+')');
 			});
