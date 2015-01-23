@@ -61,6 +61,7 @@ header{
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	overflow:hidden;
 
 	margin-bottom: 4em;
 	/* FlexBox is supported enought http://caniuse.com/#feat=flexbox...*/
@@ -107,6 +108,7 @@ footer{
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	overflow:hidden;
 
 	display: -webkit-flex;
 	display: flex;
@@ -245,7 +247,9 @@ nav a:hover, .home nav div.main a:hover{
 nav div.auxiliary a:hover{
 	/*text-decoration: underline;*/
 }
-
+nav a.active{
+	color: #00c174;
+}
 /*
  *	Lets style the content!!
  * */
@@ -322,4 +326,33 @@ nav div.auxiliary a:hover{
 	margin-top: 0px;
 }
 
+.content .sidenote-left{
+	float:left;
+
+	width: 160px;
+	color: #999;
+	font-style: oblique;
+	font-size: 0.9em;
+	line-height: 1.4em;
+	margin-top: 6px;
+
+	text-align: right;
+	position: absolute;
+	margin-left: -190px;
+}
+
+.content .sidenote-right{
+	float:right;
+
+	width: 160px;
+	color: #999;
+	font-style: oblique;
+	font-size: 0.9em;
+	line-height: 1.4em;
+	margin-top: 6px;
+
+	text-align: left;
+	position: absolute;
+	margin-left: 724px;
+}
 
