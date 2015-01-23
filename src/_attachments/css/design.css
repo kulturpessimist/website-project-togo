@@ -140,6 +140,9 @@ footer a, footer a:hover, footer a:active, footer a:visited{
 	color: #DDD;
 	text-decoration:none;
 }
+footer a img{
+	vertical-align:middle;
+}
 .home footer a, .home footer a:hover, .home footer a:active, .home footer a:visited{
 	color: #BBB;
 	text-decoration:none;
@@ -172,8 +175,15 @@ nav{
 		-ms-transform: translateY( -100% );
 			transform: translateY( -100% );
 }
-.home nav div.logo{
+nav div.logo{
+	width: 150px;
+	height: 100px;
 	position:absolute; left:0px; top:0px;
+}
+nav div.logo a{
+	margin-left: 0%;
+	margin-right: 0%;
+	line-height: 1em;
 }
 nav div.main{
 	width: 740px;
@@ -219,7 +229,7 @@ nav div.back{
 nav a, nav a:hover, nav a:active, nav a:visited{
 	text-decoration: none;
 	font-weight: 400;
-	color: #333;
+	color: #999;
 }
 nav div.back a{
 	line-height: 5em;
@@ -311,4 +321,5 @@ nav div.auxiliary a:hover{
 	margin-bottom: 1.6em;
 	margin-top: 0px;
 }
+
 
