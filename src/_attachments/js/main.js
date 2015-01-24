@@ -14,26 +14,38 @@ var aurora = {
 		},
 		scrolling: function(){
 			$('a').smoothScroll({
-				offset: -50,
+				offset: -120,
 				direction: 'top',
 			  	easing: 'swing',
 				speed: "auto",
 				autoCoefficient: 2
+			});
+			$('.content a[name]').each(function(i,el){
+				$(el).attr( 'id', $(el).attr('name') );
 			});
 		},
 		images: function(){
 			$('.content img').each(function(i,el){
 				var content = $(el).attr('alt');
 				$( "<div class='description'>"+content+"</div>" ).insertAfter( el );
+				// featherlight it...
+				$(el).featherlight( $(el).attr('src') );
 			});
+		},
+		contact: function(){
+			$('a[rel="contact"]').featherlight('<iframe src="http://natureoffice.com/de/contact.togo.php" width="940" height="410" style="border:none;overflow:hidden"></iframe>')
 		}
 	},
+	cms: (window.location.href.indexOf("cms.pagelime.com")>-1 || window.location.href.indexOf("cms.natureoffice.com")>-1),
 	/* _init_ */
 	init: function(){
-		aurora.prepare.header();
-		aurora.prepare.footer();
-		aurora.prepare.scrolling();
-		aurora.prepare.images();
+		if( !aurora.cms ){
+			aurora.prepare.header();
+			aurora.prepare.footer();
+			aurora.prepare.scrolling();
+			aurora.prepare.images();
+			aurora.prepare.contact();
+		}
 	}
 };
 

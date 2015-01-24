@@ -15,32 +15,32 @@ p{
 }
 h1{
 	font-size: 2.6em;
-	font-weight: 700;
+	font-weight: 600;
 	margin: 0.1em 0;
 }
 h2{
 	font-size: 1.8em;
-	font-weight: 600;
+	font-weight: 400;
 	margin-top: 0px;
 }
 h3{
 	font-size: 1.4em;
-	font-weight: 600;
+	font-weight: 400;
 	margin: 0.1em 0;
 }
 h4{
 	font-size: 1.1em;
-	font-weight: 400;
+	font-weight: 300;
 	margin-top: 0px;
 }
 h5{
 	font-size: 1.1em;
-	font-weight: 400;
+	font-weight: 300;
 	margin: 0.4em 0;
 }
 h6{
 	font-size: 0.8em;
-	font-weight: 300;
+	font-weight: 200;
 	margin-top: 0px;
 }
 img{
@@ -78,7 +78,7 @@ header{
 	margin-bottom: 0em;
 	background-size: contain;
 }
-header div{
+header div#headertext-cms{
 	width: 800px;
 	margin: 0 auto;
 	color: #fff;
@@ -99,11 +99,15 @@ header h1{
 	min-height: 160px;
 	margin: 1%;
 }
+.home section div p{
+	margin: 0px; padding:0px;
+	line-height: 1.1em;
+}
 
 footer{
 	width: 100%;
-	height: 300px;
-	max-height: 300px;
+	height: 200px;
+	max-height: 200px;
 	background-color: #fff;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -120,7 +124,7 @@ footer{
 .home footer{
 	height: 200px;
 }
-footer div{
+footer div#footernav-cms{
 	width: 740px;
 	margin: 0 auto;
 	margin-bottom: 1em;
@@ -137,6 +141,9 @@ footer a{
 }
 footer > img, header > img{
 	display: none;
+}
+.cms-page-editor-preview footer > img, .cms-page-editor-preview header > img{
+	display: block;
 }
 footer a, footer a:hover, footer a:active, footer a:visited{
 	color: #DDD;
@@ -156,6 +163,11 @@ nav{
 	width: 100%;
 	height: 5em;
 	background-color: #fff;
+	background-image: url('../img/natureoffice.png');
+	background-position: 99% 50%;
+	background-repeat: no-repeat;
+	background-size: 140px;
+	
 	position: fixed;
 	z-index: 1;
 	top: 0;
@@ -207,6 +219,9 @@ nav div.auxiliary{
 
 	border-top: 1px #eee solid;
 }
+nav div.auxiliary p{
+	margin: 0px; padding:0px;
+}
 nav div.auxiliary span{
 	letter-spacing: -1px;
 	margin-left: 20px;
@@ -257,27 +272,41 @@ nav a.active{
 	width: 700px;
 	margin: auto;
 }
+.content img{
+	cursor: pointer;
+}
 .content p img.left{
 	float: left;
 	margin-right: 0.6em;
 	margin-top: 0.3em;
+	width: 240px !important;
+	height: 180px !important;
 }
 .content p img.off-left{
 	float: left;
 	margin-right: 0.6em;
 	margin-top: 0.3em;
 	margin-left: -60px;
+	width: 300px !important;
+	height: 210px !important;
 }
 .content p img.right{
 	float: right;
 	margin-left: 0.6em;
 	margin-top: 0.3em;
+	width: 240px !important;
+	height: 180px !important;
 }
 .content p img.off-right{
 	float: right;
 	margin-left: 0.6em;
 	margin-top: 0.3em;
 	margin-right: -60px;
+	width: 300px !important;
+	height: 210px !important;
+}
+.content img.center{
+	width:700px !important;
 }
 /*
  * img:after seems not to work...
@@ -356,3 +385,8 @@ nav a.active{
 	margin-left: 724px;
 }
 
+.content .sidenote-left a, .content .sidenote-right a{
+	font-size: 0.9em;
+	line-height: 1.4em;
+	color: #999;
+}
