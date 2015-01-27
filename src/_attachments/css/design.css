@@ -10,7 +10,7 @@ html, body{
 	font-size: 1.1em;
 	font-weight: 300;
 }
-p, ul, li, ol{
+p, ul, li, ol, td, td p{
 	line-height: 1.7em;
 }
 ul { 
@@ -305,7 +305,6 @@ nav a.active{
 }
 .content table tr td p{
 	margin: 0px; padding:0px;
-	line-height: 1.1em;
 }
 
 .content img{
